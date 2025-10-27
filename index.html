@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap">
   
   <title>Frontend Mentor | Blog preview card</title>
 
@@ -18,10 +18,16 @@
     }
     p{
       font-size: 16px;
-      
     }
     p, h2{
       font-family: "Figtree", sans-serif;
+    }
+    h2{
+      font-weight: 800;
+    }
+    h2:hover{
+      color: hsl(47, 88%, 63%);
+      cursor: pointer;
     }
     .container{
       display: flex;
@@ -34,17 +40,29 @@
       border-radius: 15px;
       border: 1px solid black;
       box-shadow: 10px 10px;
+      max-width: 350px;
+      padding: 10px;
     }
-    .topic{
+    .learning{
       background-color: hsl(47, 88%, 63%);
       font-weight: 800;
       border-radius: 3px;
+      text-align: center;
+      width: 100px;
     }
     .avatar{
       font-weight: 800;
     }
-    img{
+    .bloglogo{
       border-radius: 10px;
+      display: block;
+      margin: auto;
+    }
+    .info{
+      color: hsl(0, 0%, 42%);
+    }
+    .date, .info{
+      font-weight: 500;
     }
   </style>
 </head>
@@ -52,11 +70,11 @@
 
   <div class="container">
     <div class="card">
-      <img src="assets/images/illustration-article.svg" alt="blog logo">
-      <p class="topic">Learning</p>
-      <p>Published 21 Dec 2023</p>
+      <img class="bloglogo" src="assets/images/illustration-article.svg" alt="blog logo">
+      <p class="learning">Learning</p>
+      <p class="date">Published 21 Dec 2023</p>
       <h2>HTML & CSS foundations</h2>
-      <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+      <p class="info">These languages are the backbone of every website, defining structure, content, and presentation.</p>
       <p class="avatar"><img src="assets/images/image-avatar.webp" alt="avatar">Greg Hooper</p>
     </div>
   </div>
